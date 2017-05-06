@@ -22,6 +22,6 @@ before_install:
 - mkdir -p lib
 - gcloud auth activate-service-account --key-file client-secret.json
 script:
-- gcloud app deploy --project junglebadger-166816 --v 20170506t142210
+- gcloud app deploy --project junglebadger-166816 -v 20170506t142210
 env:
 - DATASET_ID=junglebadger-166816
