@@ -1,0 +1,78 @@
+{
+  "name": "nodejs-getting-started",
+  "version": "1.0.0",
+  "description": "End to end sample for running Node.js applications on Google Cloud Platform",
+  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "ava -t 30s test/*.test.js | tap-dot",
+    "cover": "nyc --cache npm test; nyc report --reporter=html"
+  },
+  "author": "dcerag",
+  "contributors": [
+    {
+      "name": "Jon Wayne Parrott",
+      "email": "jonwayne@google.com"
+    },
+    {
+      "name": "Jonathan Simon",
+      "email": "jbsimon@google.com"
+    },
+    {
+      "name": "Jason Dobry",
+      "email": "jdobry@google.com"
+    },
+    {
+      "name": "Ace Nassri",
+      "email": "anassri@google.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "semistandard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "consolidate": "^0.14.5",
+    "ejs": "^2.5.6",
+    "express": "~4.15.2",
+    "http": "0.0.0",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.0.0",
+    "ava": "~0.19.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-changed": "^3.1.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-image-resize": "^0.12.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "nodejs-repo-tools": "git+https://git@github.com/GoogleCloudPlatform/nodejs-repo-tools.git",
+    "promise-polyfill": "^6.0.2",
+    "supertest": "~3.0.0",
+    "tap-dot": "~1.0.5"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  }
+}
