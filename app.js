@@ -13,7 +13,21 @@
         bodyParser = require("body-parser"),
         compress = require("compression"),
         server = require("http").createServer(app),
-        morgan = require("morgan");
+        morgan = require("morgan"),
+        datastore = require('@google-cloud/datastore');
+
+    var datastoreClient = datastore({
+        "projectId": "junglebadger-166816",
+        "keyFilename": "./client-secret.json"
+    });
+
+    var key = datastoreClient.key(["Test", 5629499534213120]);
+    console.log(key);
+
+    datastoreClient.get(key, function(err, entity) {
+        console.log(err || entity);
+    });
+
 
     // passport = require("passport");
 
