@@ -34,11 +34,7 @@
     // });
     //
 
-    blogData.listData("post", "timestamp").then(function (data) {
-        console.log(data);
-    }, function (err) {
-        console.log(err);
-    });
+
 
     // var key = datastoreClient.key(["Test", 5629499534213120]);
 
@@ -62,6 +58,14 @@
 
     // require("./server/controller/passport")(passport);
     require("./server/routes/index")(app, {});
+
+    app.get("/test", function (req, res) {
+        blogData.listData("post", "timestamp").then(function (data) {
+            console.log(data);
+        }, function (err) {
+            console.log(err);
+        });
+    });
 
     app.get("/oi", function (req, res) {
         return res.status(200).render("./main_module/index");
